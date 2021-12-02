@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <title>calculator</title>
+    <link rel="icon" href="calc.png" type="icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <form name="wrapper">
+    <div class="wrapper" name="wrapper" id="wrapper">
+        <input type="textfield" value="" name="ans" placeholder="0" id="input">
+        <div class="keys">
+            <input type="reset" value="C" class="operator-key" op="clear">
+            <input type="button" onClick="document.wrapper.ans.value +='Math.sqrt('" value="√" class="operator-key" >
+            <input type="button" onClick="document.wrapper.ans.value +='3.141592653589793238'" value="π" class="operator-key" >
+            <input type="button" onClick="document.wrapper.ans.value +='/'" value="/" class="operator-key" >
+            <input type="button" onClick="document.wrapper.ans.value +='7'" value="7" class="num-key">
+            <input type="button" onClick="document.wrapper.ans.value +='8'" value="8" class="num-key">
+            <input type="button" onClick="document.wrapper.ans.value +='9'" value="9" class="num-key">
+            <input type="button" onClick="document.wrapper.ans.value +='*'" value="x" class="operator-key" >
+            <input type="button" onClick="document.wrapper.ans.value +='4'" value="4" class="num-key">
+            <input type="button" onClick="document.wrapper.ans.value +='5'" value="5" class="num-key">
+            <input type="button" onClick="document.wrapper.ans.value +='6'" value="6" class="num-key">
+            <input type="button" onClick="document.wrapper.ans.value +='-'" value="-" class="operator-key" >
+            <input type="button" onClick="document.wrapper.ans.value +='1'" value="1" class="num-key">
+            <input type="button" onClick="document.wrapper.ans.value +='2'" value="2" class="num-key">
+            <input type="button" onClick="document.wrapper.ans.value +='3'" value="3" class="num-key">
+            <input type="button" onClick="document.wrapper.ans.value +='+'" value="+" class="operator-key" >
+            <input type="button" onClick="document.wrapper.ans.value +=')'" value=")" class="operator-key" >
+            <input type="button" onClick="document.wrapper.ans.value +='0'" value="0" class="num-key">
+            <input type="button" onClick="document.wrapper.ans.value +='.'" value="." class="num-key">
+            <input type="button" value="=" onClick ="document.wrapper.ans.value = eval(document.wrapper.ans.value)">
+        </div>
+    </div>
+    </form>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            function cal(key){
+                source = document.getElementById('input')
+                source.value += key
+            }
+        })
+    </script>
+</body>
+</html>
